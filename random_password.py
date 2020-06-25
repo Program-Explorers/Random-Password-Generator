@@ -1,4 +1,4 @@
-# import statement
+# import statements
 import random
 import string
 
@@ -10,7 +10,7 @@ def greeting():
 
 class password_generator():
 
-    def __init__(self, word, length = 8):
+    def __init__(self, word, length=8):
         self.word = word
         self.length = length
 
@@ -32,7 +32,7 @@ class password_generator():
 
         while length_of_to_add != 0:
             popped = to_add.pop()
-            rand_choice = random.randint(0,1)
+            rand_choice = random.randint(0, 1)
 
             if rand_choice == 0:
                 list_word.insert(0, popped)
@@ -45,9 +45,8 @@ class password_generator():
         return list_word
 
 
-
-
 def main():
+    print('\n' * 10)
     greeting()
     word = input("Enter in a word for your random password: ")
     length_word = int(input("How many random characters do you want in your password: "))
@@ -64,8 +63,6 @@ def main():
     the_password = users_password.letters_to_add(add_to_word)
 
     print(f"\n\nYour new password is \n{''.join(the_password)}")
-
-
 
 
 if __name__ == "__main__":
